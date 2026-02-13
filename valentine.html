@@ -1,0 +1,457 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Love ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #ff758c, #63d14f);
+        font-family: 'Segoe UI', sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        width: 550px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .buttons {
+        position: relative;
+        height: 100px;
+        margin-top: 30px;
+    }
+
+    button {
+        padding: 12px 28px;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        position: absolute;
+        transition: 0.15s ease;
+    }
+
+    #yesBtn {
+        background: white;
+        color: #ff4b7d;
+    }
+
+    #yesBtn:hover {
+        background: #ff4b7d;
+        color: white;
+    }
+
+    #noBtn {
+        background: #222;
+        color: white;
+    }
+
+    #hiddenMessage {
+        display: none;
+        margin-top: 25px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .celebrate {
+        position: absolute;
+        font-size: 22px;
+        animation: burst 2s ease-out forwards;
+    }
+
+    @keyframes burst {
+        0% {transform: scale(0) translateY(0); opacity: 1;}
+        100% {transform: scale(1.5) translateY(-150px); opacity: 0;}
+    }
+
+    .heart {
+        position: absolute;
+        color: rgba(255,255,255,0.7);
+        animation: float 6s linear infinite;
+        pointer-events: none;
+    }
+
+    @keyframes float {
+        0% {transform: translateY(100vh) scale(0);}
+        100% {transform: translateY(-10vh) scale(1);}
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card" id="card">
+    <h2>Will You Be My Valentine? ❤️</h2>
+
+    <p>
+        “Therefore what God has joined together, let no one separate.”  
+        — Mark 10:9
+    </p>
+
+    <div class="buttons" id="buttonArea">
+        <button id="yesBtn" onclick="sayYes()">Yes ❤️</button>
+        <button id="noBtn">No 😅</button>
+    </div>
+
+    <p id="hiddenMessage">
+        You just made me the happiest man alive ❤️  
+        I love you forever and always 💍✨
+    </p>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const buttonArea = document.getElementById("buttonArea");
+const card = document.getElementById("card");
+
+/* ---- CENTER BUTTONS INITIALLY ---- */
+function centerButtons() {
+    const gap = 30;
+
+    const totalWidth = yesBtn.offsetWidth + noBtn.offsetWidth + gap;
+    const startX = (buttonArea.clientWidth - totalWidth) / 2;
+
+    yesBtn.style.left = startX + "px";
+    yesBtn.style.top = "30px";
+
+    noBtn.style.left = (startX + yesBtn.offsetWidth + gap) + "px";
+    noBtn.style.top = "30px";
+}
+
+window.onload = centerButtons;
+
+/* ---- SMART ESCAPE LOGIC ---- */
+document.addEventListener("mousemove", function(e) {
+
+    const rect = noBtn.getBoundingClientRect();
+    const distance = Math.hypot(
+        e.clientX - (rect.left + rect.width / 2),
+        e.clientY - (rect.top + rect.height / 2)
+    );
+
+    if (distance < 90) {
+        moveButton();
+    }
+});
+
+function moveButton() {
+    const maxX = buttonArea.clientWidth - noBtn.offsetWidth;
+    const maxY = buttonArea.clientHeight - noBtn.offsetHeight;
+
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
+}
+
+/* ---- YES CELEBRATION ---- */
+function sayYes() {
+    document.getElementById("hiddenMessage").style.display = "block";
+
+    for (let i = 0; i < 30; i++) {
+        const emoji = document.createElement("div");
+        emoji.classList.add("celebrate");
+        emoji.innerHTML = ["🎉","❤️","✨","💖"][Math.floor(Math.random()*4)];
+        emoji.style.left = Math.random() * card.clientWidth + "px";
+        emoji.style.top = card.clientHeight - 60 + "px";
+        card.appendChild(emoji);
+
+        setTimeout(() => emoji.remove(), 2000);
+    }
+}
+
+/* ---- FLOATING HEARTS BACKGROUND ---- */
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 6000);
+}, 300);
+
+</script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Abisekha ❤️</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #ff758c, #62c76a);
+        font-family: 'Segoe UI', sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        color: rgb(69, 9, 9);
+        text-align: center;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        width: 650px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .counter {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .buttons {
+        position: relative;
+        height: 100px;
+        margin-top: 30px;
+    }
+
+    button {
+        padding: 12px 28px;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+        position: absolute;
+        transition: 0.2s ease;
+    }
+
+    #yesBtn {
+        background: white;
+        color: #ff4b7d;
+    }
+
+    #yesBtn:hover {
+        background: #770c2a;
+        color: white;
+    }
+
+    #noBtn {
+        background: #222;
+        color: white;
+    }
+
+    /* NEW: Invisible effect */
+    .hiddenNo {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    #hiddenMessage {
+        display: none;
+        margin-top: 25px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+
+    .celebrate {
+        position: absolute;
+        font-size: 22px;
+        animation: burst 2s ease-out forwards;
+    }
+
+    @keyframes burst {
+        0% {transform: scale(0) translateY(0); opacity: 1;}
+        100% {transform: scale(1.5) translateY(-150px); opacity: 0;}
+    }
+
+    .heart {
+        position: absolute;
+        color: rgba(255,255,255,0.7);
+        animation: float 6s linear infinite;
+        pointer-events: none;
+    }
+
+    @keyframes float {
+        0% {transform: translateY(100vh) scale(0);}
+        100% {transform: translateY(-10vh) scale(1);}
+    }
+
+    .photo {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .photo img {
+        width: 200px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card" id="card">
+    <h2>Abisekha Chelakuttyoo🎀</h2>
+    <h3>Will You Be My Valentine?</h3>
+
+    <div class="counter" id="loveCounter"></div>
+
+    <div class="buttons" id="buttonArea">
+        <button id="yesBtn" onclick="sayYes()">Yes ❤️</button>
+        <button id="noBtn">No 😅</button>
+    </div>
+
+    <div id="hiddenMessage">
+        From the day you came into my life,  
+        you became my peace, my strength, and my biggest blessing.  
+
+        I thank God for you every single day.  
+        I don’t just want today…  
+        I want forever with you. ❤️💍
+    </div>
+
+    <div class="photo" id="photoSection">
+        <img src="me.jpeg" alt="Our Memory ❤️">
+    </div>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const buttonArea = document.getElementById("buttonArea");
+const card = document.getElementById("card");
+
+/* ---- CENTER BUTTONS ---- */
+function centerButtons() {
+    const gap = 40;
+    const totalWidth = yesBtn.offsetWidth + noBtn.offsetWidth + gap;
+    const startX = (buttonArea.clientWidth - totalWidth) / 2;
+
+    yesBtn.style.left = startX + "px";
+    yesBtn.style.top = "30px";
+
+    noBtn.style.left = (startX + yesBtn.offsetWidth + gap) + "px";
+    noBtn.style.top = "30px";
+}
+
+window.onload = function() {
+    centerButtons();
+    updateCounter();
+};
+
+/* ---- LOVE COUNTER ---- */
+function updateCounter() {
+    const startDate = new Date("2023-10-11T00:00:00");
+    const now = new Date();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+    // document.getElementById("loveCounter").innerText =
+    //     "We have been in love for " + days + " days ❤️ " +
+    //     hours + " hrs " + minutes + " mins";
+}
+
+setInterval(updateCounter, 60000);
+
+/* ---- INVISIBLE NO BUTTON ---- */
+noBtn.addEventListener("mouseenter", function () {
+    noBtn.classList.add("hiddenNo");
+
+    setTimeout(() => {
+        noBtn.classList.remove("hiddenNo");
+        moveButton(); // reappear somewhere else
+    }, 1500);
+});
+
+/* ---- SMART ESCAPE ---- */
+document.addEventListener("mousemove", function(e) {
+    const rect = noBtn.getBoundingClientRect();
+    const distance = Math.hypot(
+        e.clientX - (rect.left + rect.width / 2),
+        e.clientY - (rect.top + rect.height / 2)
+    );
+
+    if (distance < 90) {
+        moveButton();
+    }
+});
+
+function moveButton() {
+    const maxX = card.clientWidth - noBtn.offsetWidth;
+    const maxY = card.clientHeight - noBtn.offsetHeight;
+
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
+}
+
+/* ---- YES ACTION ---- */
+function sayYes() {
+    document.getElementById("hiddenMessage").style.display = "block";
+    document.getElementById("photoSection").style.display = "block";
+
+    for (let i = 0; i < 35; i++) {
+        const emoji = document.createElement("div");
+        emoji.classList.add("celebrate");
+        emoji.innerHTML = ["🎉","❤️","✨","💖"][Math.floor(Math.random()*4)];
+        emoji.style.left = Math.random() * card.clientWidth + "px";
+        emoji.style.top = card.clientHeight - 60 + "px";
+        card.appendChild(emoji);
+        setTimeout(() => emoji.remove(), 2000);
+    }
+}
+
+/* ---- FLOATING HEARTS ---- */
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "♥️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}, 300);
+
+</script>
+
+</body>
+</html>
